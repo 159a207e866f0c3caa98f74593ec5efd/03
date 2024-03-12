@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title> Physics </title>
+</head>
+
+<body onload="setup()">
+  <div class="params-holder">
+    <div class="param">
+      <div class="text"> Величина магнитного поля (Тл) </div>
+      <input size="4" type="number" step="any" id="b" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Площадь контура (м<sup>2</sup>) </div>
+      <input size="4" type="number" step="any" id="s" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Частота вращения (Гц) </div>
+      <input size="4" type="number" step="any" id="v" class="input" />
+    </div>
+    <div class="param">
+      <div class="text"> Сопротивление контура (Ом) </div>
+      <input size="4" type="number" step="any" id="r" class="input" />
+    </div>
+    <div class="param">
+      <button class="button" id="run" onclick="run()">
+        Построить график
+      </button>
+    </div>
+  </div>
+
+  <div class="canvas-list">
+    <div class="canvas-holder">
+      <canvas id="canvasE" />
+    </div>
+    <div class="canvas-holder">
+      <canvas id="canvasI" />
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="heading"> <b> Источники информации </b> </div>
+    <ul>
+      <li> Презентация к четвертой лекции, 17ый слайд (<a
+          href="https://study.physics.itmo.ru/pluginfile.php/38673/mod_resource/content/1/Lec2.04%20%D0%9C%D0%B0%D0%B3%D0%BD%D0%B5%D1%82%D0%B8%D0%BA%D0%B8.%20%D0%AD%D0%9C%20%D0%B8%D0%BD%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D1%8F.pdf">ссылка</a>)
+      </li>
+      <li> Презентация кo второй лекции, 6ой слайд (<a
+          href="https://study.physics.itmo.ru/pluginfile.php/38525/mod_resource/content/1/Lec2.02%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5%20%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D1%8B%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%B8%D0%BA%D0%B8.pdf">ссылка</a>)
+      </li>
+    </ul>
+
+    Исходный код доступ на <a href="https://github.com/159a207e866f0c3caa98f74593ec5efd/03">github</a>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
